@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 720px;
+    align-items: center;
+}
+.inputBox {
+    margin-top: 200px;
+    display: block;
+    align-items: center;
+}
+
+.input {
+    margin: 0 auto;
+    display: block;
+    width:200px;
+    border-radius: 3px;
+    border:solid #28688C;
+}
+
+.plsenter {
+    display: block;
+    text-align: center;
+    width: 50%;
+    padding:20px;
+}
+.weatherBox{
+   
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 50%;
+    padding: 50px;
+}
+.weatherBox_off{
+   
+    display: none;
+    justify-content: space-between;
+    align-content: center;
+    width: 50%;
+    padding: 50px;
+}
+
+
+.errorBox{
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+    width:50%;
+    padding: 20px;
+}
+.icon {
+    display: block;
+    width:7px;
+    height: 10px;
+}
+
+.plsenter, .errorBox, .weatherBox {
+    margin: 100px auto;
+    background-color: #28688C;
+    background-size: cover;
+    box-shadow:  1px 5px 25px 3px #444;
+    border-radius: 3px;
+}
+.plsenter, .errorBox, .weatherBox span {
+    color: white;
+}
+
+/* Дизайн:
+
+1) Размер шрифта и семейство шрифта: 16px | 'Open Sans', sans-serif
+
+2) Размер контейнера: 720px
+
+3) Размер колонок внутри контейнера: 30% | 50% | 20%
+
+4) Границы и размеры у инпута: 3px solid #28688C | 200px
+
+5) Цвет карточки: #28688C
+
+6) Тень карточки: 1px 5px 25px 3px #444
+
+7) Знак "градус цельсия": ° */
