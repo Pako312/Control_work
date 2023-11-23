@@ -31,6 +31,11 @@
     width: 50%;
     padding:20px;
 }
+
+.plsenter_off {
+    display: none;
+}
+
 .weatherBox{
    
     display: flex;
@@ -55,6 +60,10 @@
     text-align: center;
     width:50%;
     padding: 20px;
+}
+
+.errorBox_off {
+    display: none;
 }
 .icon {
     display: block;

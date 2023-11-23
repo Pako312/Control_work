@@ -1,18 +1,24 @@
 
 const API_KEY = "401dac943ba445ff9b381057231711";
 const input = document.querySelector(".input");
-const weatherBox = document.querySelector(".weatherBox")
+const weatherBox = document.querySelector(".weatherBox");
+const errorBox = document.querySelector(".errorBox");
+const plsEnter = document.querySelector(".plsenter");
 
 // getWeather(url);
 
 async function getWeather(value) {
+    plsEnter.classList.add('plsenter_off')
     try { const resp = await fetch(`https://api.weatherapi.com/v1/current.json?key=401dac943ba445ff9b381057231711&q=${value}`);
     const respData = await resp.json();
     console.log(respData)
     showData(respData)
     console.log(respData)
+    weatherBox.classList.remove('weatherBox_off')
+    
+
 } catch(error) {
- console.log(error)
+    errorBox.classList.remove('errorBox_off')
 
 }
 
@@ -46,13 +52,17 @@ function showData(respData) {
 
 input.addEventListener('keypress', (e) => {
     const value = input.value
-    if (e.key === "Enter" && value) {
-        getWeather(value)
+    if (e.key === "Enter") {
+        if (value) {
+            getWeather(value)
+        } else if (!value) {
+            // weatherBox.classList.remove("weatherBox");
+            // weatherBox.classList.add("weatherBox_off");
+
+            // document.body.removeChild(weatherBox)
+        }
+        
     }   
-    // else if (value === 0) {
-    //     weatherBox.classlist.remove("weatherBox");
-    //     weatherBox.classlist.add("weatherBox_off");
-    // }
 });
 
 
